@@ -9,7 +9,7 @@ const Header = () => {
 
   function deleteUserHandler() {
     setUser(null);
-    localStorage.clear();
+    localStorage.removeItem("user");
   }
 
   return (
