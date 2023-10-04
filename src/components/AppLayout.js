@@ -8,12 +8,8 @@ const AppLayout = () => {
 
   useEffect(() => {
     let storeduser = localStorage.getItem("user");
-    if (!storeduser) {
-      navigate("/edit");
-    } else {
-      storeduser = JSON.parse(storeduser);
-      setUser(storeduser);
-    }
+    storeduser = JSON.parse(storeduser);
+    setUser(storeduser);
   }, []);
 
   return (
